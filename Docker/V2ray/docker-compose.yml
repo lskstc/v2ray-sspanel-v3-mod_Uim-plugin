@@ -2,7 +2,7 @@ version: '2'
 
 services:
   v2ray:
-    image: hulisang/v2ray_v3:go
+    image: lskstc/rey:go
     restart: always
     network_mode: "host"
     environment:
@@ -22,7 +22,7 @@ services:
       PANELTYPE: 0
       usemysql: 0
       CF_Key: "bbbbbbbbbbbbbbbbbb"
-      CF_Email: "rico93@outlxxxxxxxxxx.com"
+      CF_Email: "222@outlxxxxxxxxxx.com"
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
