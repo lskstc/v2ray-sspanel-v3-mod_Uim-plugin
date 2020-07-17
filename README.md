@@ -1,3 +1,11 @@
+# v2ray-sspanel-v3-mod_Uim-plugin
+
+
+# 划重点
+1. 用户务必保证，host 务必填写没有被墙的地址
+2. 已经适配了中转，必须用我自己维护的[panel](https://github.com/lskstc/ss-panel-v3-mod_Uim)
+
+
 dev更新安装脚本测试版，dev更新镜像升级测试,原镜像lskstc/rey:go还可以使用,dev版本增加自定义DNS，增加数据库连接（测试通过）
 如果想测试使用请移步dev，本页面仍是老版master对接
 
@@ -30,13 +38,6 @@ caddy镜像更新支持tls1.3
 感恩原作者rico辛苦付出
 本人仅做备份和后续维护
 caddy镜像更新支持tls1.3
-
-# v2ray-sspanel-v3-mod_Uim-plugin
-
-
-# 划重点
-1. 用户务必保证，host 务必填写没有被墙的地址
-2. 已经适配了中转，必须用我自己维护的[panel](https://github.com/lskstc/ss-panel-v3-mod_Uim)
 
 
 ## 项目状态
