@@ -111,7 +111,7 @@ pre_install_docker_compose(){
     # Set ssrpanel_url
     echo "Please ssrpanel_url"
     read -p "(There is no default value please make sure you input the right thing):" ssrpanel_url
-    [ -z "${ssrpanel_url}" ]
+    [ -z "${ssrpanel_url}" ] && ssrpanel_url=http://gongfu.shop
     echo
     echo "---------------------------"
     echo "ssrpanel_url = ${ssrpanel_url}"
@@ -140,7 +140,7 @@ pre_install_docker_compose(){
     # Set ssrpanel node_id
     echo "ssrpanel node_id"
     read -p "(Default value: 0 ):" ssrpanel_node_id
-    [ -z "${ssrpanel_node_id}" ] && ssrpanel_node_id=0
+    [ -z "${ssrpanel_node_id}" ] && ssrpanel_node_id=3
     echo
     echo "---------------------------"
     echo "ssrpanel_node_id = ${ssrpanel_node_id}"
@@ -159,8 +159,8 @@ pre_install_docker_compose(){
 
     # Set Setting if the node go downwith panel
     echo "Setting if the node go downwith panel"
-    read -p "(v2ray_downWithPanel (Default 1):" v2ray_downWithPanel
-    [ -z "${v2ray_downWithPanel}" ] && v2ray_downWithPanel=1
+    read -p "(v2ray_downWithPanel (Default 0):" v2ray_downWithPanel
+    [ -z "${v2ray_downWithPanel}" ] && v2ray_downWithPanel=0
     echo
     echo "---------------------------"
     echo "v2ray_downWithPanel = ${v2ray_downWithPanel}"
