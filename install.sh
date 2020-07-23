@@ -110,7 +110,7 @@ error_detect_depends(){
 pre_install_docker_compose(){
     # Set ssrpanel_url
     echo "Please ssrpanel_url"
-    read -p "(There is no default value please make sure you input the right thing):" ssrpanel_url
+    read -p "(ssrpanel_url: Default (http://gongfu.shop)):" ssrpanel_url
     [ -z "${ssrpanel_url}" ] && ssrpanel_url=http://gongfu.shop
     echo
     echo "---------------------------"
