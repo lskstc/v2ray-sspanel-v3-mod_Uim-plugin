@@ -75,14 +75,14 @@ v2ray 后端 kcp、tcp、ws 都是多用户共用一个端口。
 [面板设置说明 主要是这个](https://github.com/lskstc/ss-panel-v3-mod_Uim/wiki/v2ray-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
 
 ~~~
-没有CDN的域名或者ip;端口（外部链接的);AlterId;协议层;;额外参数(path=/v2ray|host=xxxx.win|inside_port=10550这个端口内部监听))
+没有CDN的域名或者ip;端口（外部链接的);AlterId;协议层;;额外参数(path=/v2ray|host=xxxx.win设置的是落地节点|server=xxxx.com设置的是前置中转节点|inside_port=10550这个端口内部监听))
 
 // ws 示例
 xxxxx.com;10550;16;ws;;path=/v2ray|host=oxxxx.com
 
 // ws + tls (Caddy 提供)
-xxxxx.com;0;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550
-xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550
+xxxxx.com;0;16;tls;ws;path=/v2ray|host=oxxxx.com|server=zxxxx.com|inside_port=10550
+xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|server=zxxxx.com|inside_port=10550
 
 
 
@@ -90,8 +90,8 @@ xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550
 xxxxx.com;11120;16;ws;;path=/v2ray|host=oxxxx.com
 
 // nat🐔 ws + tls (Caddy 提供)
-xxxxx.com;0;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550|outside_port=11120
-xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550|outside_port=11120
+xxxxx.com;0;16;tls;ws;path=/v2ray|host=oxxxx.com|server=zxxxx.com|inside_port=10550|outside_port=11120
+xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|server=zxxxx.com|inside_port=10550|outside_port=11120
 ~~~
 
 目前的逻辑是
